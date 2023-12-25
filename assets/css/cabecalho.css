@@ -1,0 +1,38 @@
+.cabecalho {
+    display: grid;
+    background-color: var(--cor-de-fundo);
+    border-bottom: 1px solid var(--cor-fonte-leve);
+    padding: 0.75em;
+}
+
+.cabecalho__logo {
+    justify-self: center;
+    width: 43%;
+}
+
+.cabecalho-carreiras__logo {
+    width: 20%;
+}
+
+@media screen and (min-width: 440px) {
+    .cabecalho__logo {
+        width: 40%;
+        padding: 0.75em 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cabecalho {
+        padding: 0;
+    }
+
+    .cabecalho__logo {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .cabecalho__logo {
+        width: 20%;
+    }
+}

@@ -1,0 +1,128 @@
+.navegacao {
+    align-items: center;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-fonte);
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0.5em 1.5em;
+    height: 2.5em;
+    position: relative;
+}
+
+.navegacao__botao--menu {
+    justify-self: start;
+    background-color: transparent;
+    border: none;
+    color: var(--cor-fonte);
+    font-size: 1.5em;
+    transition: 0.15s all;
+}
+
+.navegacao__botao--menu:active {
+    color: var(--vermelho-metropole);
+    box-shadow: var(--sombra-botao-menu);
+    font-size: 1.25em;
+}
+
+.menu__lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-de-fundo-escuro);
+    height: 55vh;
+    position: absolute;
+    left: -52%;
+    top: 3.5em;
+    transition: 0.5s all;
+    z-index: 1;
+    width: 50%;
+}
+
+.menu__lista--ativo {
+    left: 0;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu__item {
+    padding: 0.5em;
+}
+
+.menu__link {
+    color: var(--cor-fonte);
+    text-decoration: none;
+    font-size: 0.8em;
+    transition: 0.2s all;
+}
+
+.menu__link:hover {
+    color: var(--vermelho-metropole);
+}
+
+.menu__link--home {
+    font-size: 2em;
+}
+
+.menu__link--ativo {
+    color: var(--vermelho-metropole);
+}
+
+.navegacao__copy {
+    justify-self: end;
+    font-size: 0.7em;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    transition: 0.5s all;
+}
+
+.navegacao__copy:hover {
+    color: var(--vermelho-metropole);
+}
+
+.menu-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .navegacao__botao--menu {
+        display: none;
+    }
+
+    .navegacao__copy {
+        display: none;
+    }
+
+    .menu-desktop {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(5, auto) 1fr;
+        gap: 2em;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+    }
+
+    .menu-desktop__item--webmail {
+        justify-self: flex-end;
+    }
+
+    .menu-desktop__link {
+        text-decoration: none;
+        color: var(--cor-fonte);
+        transition: 0.2s all;
+    }
+
+    .menu-desktop__link:hover {
+        color: var(--vermelho-metropole);
+        background-color: var(--cor-fonte-hover);
+        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    .menu-desktop__link--home {
+        font-size: 1.75em;
+    }
+
+    .menu-desktop__link--ativo {
+        color: var(--vermelho-metropole);
+    }
+
+}

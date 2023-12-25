@@ -1,0 +1,25 @@
+.rodape {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-fonte);
+    transition: 0.5s all;
+    font-size: 0.75em;
+    padding: 1em;
+    gap: 0.15em;
+}
+
+.rodape:hover {
+    color: var(--vermelho-metropole);
+}
+
+.rodape-carreiras:hover {
+    color: var(--amarelo-metropole);
+}
+
+@media screen and (min-width: 1024px) {
+    .rodape {
+        display: flex;
+        padding: 0 0 1em 0;
+    }
+}

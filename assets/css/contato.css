@@ -1,0 +1,52 @@
+.contato {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%/1 - 0.5em, max(250px, 100%/4 - 0.5em)), 1fr));
+    grid-template-rows: auto auto auto;
+}
+
+.unidades__item {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em 0;
+    padding: 0.5em;
+    margin: 0.25em;
+    background-color: var(--cor-de-fundo);
+    border: 2px solid var(--cor-de-fundo);
+}
+
+.unidades__titulo {
+    justify-self: center;
+    grid-column: 1/3;
+    padding: 0.5em 0;
+}
+
+.unidades__link--telefone, .unidades__link--endereco, .unidades__texto, .unidades__titulo {
+    text-decoration: none;
+    color: var(--cor-fonte);
+    font-size: 0.95em;
+    justify-self: center;
+    transition: 0.2s all;
+}
+
+.unidades__titulo:hover, .unidades__texto:hover {
+    color: var(--vermelho-metropole);
+}
+
+.unidades__link--telefone:hover, .unidades__link--endereco:hover {
+    color: var(--vermelho-metropole);
+    background-color: var(--cor-fonte-hover);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.unidades__mapa {
+    grid-column: 1/3;
+    width: 100%;
+    height: 10em;
+    justify-self: center;
+}
+
+.unidades__link--endereco {
+    grid-column: 1/3;
+}

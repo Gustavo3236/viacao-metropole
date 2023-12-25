@@ -1,0 +1,74 @@
+.lista-carreiras {
+    background-color: var(--cor-de-fundo);
+    border: 2px solid rgba(0, 0, 0, 0.6);
+    border-bottom: none;
+    text-align: center;
+    width: 100%;
+}
+
+.lista-carreiras__item {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+    padding: 1em;
+    font-size: 0.9em;
+}
+
+.cadastrar {
+    padding: 2em 0 1em 0;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75em 0;
+}
+
+.cadastrar__texto {
+    font-size: 0.9em;
+}
+
+.cadastrar__botao {
+    text-decoration: none;
+    color: var(--cor-fonte);
+    background-color: rgba(99, 99, 99, 0.8);
+    padding: 1em 0;
+    width: 30%;
+    justify-self: center;
+    text-align: center;
+    transition: 0.5s all;
+    font-size: 0.8em;
+    width: 55%;
+}
+
+.cadastrar__botao:hover {
+    background-color: var(--amarelo-metropole-fraco);
+    box-shadow: 0 1px 5px var(--amarelo-metropole-fraco);
+    font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+    .lista-carreiras {
+        width: 70%;
+    }
+
+    .cadastrar__botao {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .lista-carreiras {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .lista-carreiras__item {
+        font-size: 1em;
+    }
+
+    .cadastrar__texto {
+        font-size: 1em;
+    }
+
+    .cadastrar__botao {
+        font-size: 0.9em;
+    }
+}

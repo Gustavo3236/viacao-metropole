@@ -1,0 +1,76 @@
+.notificacao {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    display: inline-block;
+    max-width: 300px;
+    padding: 20px 15px;
+    border-radius: 4px;
+    background-color: rgba(20, 22, 25, 0.65);
+    color: #F6F5F9;
+    box-shadow: 0 1px 10px rgba(20, 22, 25, 0.3);
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade 4s linear forwards;
+}
+
+.notificacao__texto {
+    transition: 0.2s all;
+}
+
+.notificacao__texto:hover, .notificacao__texto:active {
+    color: var(--vermelho-metropole);
+}
+
+.barra-progesso {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: 0;
+    height: 3px;
+    background-image: linear-gradient(to right, var(--vermelho-metropole), var(--vermelho-metropole), 
+    var(--amarelo-metropole));
+    border-radius: 4px;
+    animation: progress 3.2s .35s linear forwards;
+}
+
+@keyframes fade {
+    5% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes progress {
+    to {
+        width: calc(100% - 10px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .notificacao {
+        bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .notificacao {
+        bottom: 5px;
+    }
+}

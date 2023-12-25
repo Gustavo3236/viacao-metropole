@@ -1,0 +1,80 @@
+.cabecalho-carreiras {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    padding: 0.5em;
+}
+
+.cabecalho-carreiras__logo {
+    width: 50%;
+    justify-self: center;
+}
+
+.cabecalho-carreiras__titulo {
+    color: var(--cor-fonte);
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-size: 0.8em;
+    transition: 0.2s all;
+}
+
+.cabecalho-carreiras__titulo:hover {
+    color: var(--amarelo-metropole);
+}
+
+.navegacao__copy {
+    color: var(--cor-fonte);
+}
+
+.copy__carreiras {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-size: 0.6em;
+}
+
+.copy__carreiras:hover {
+    color: var(--amarelo-metropole);
+}
+
+@media screen and (min-width: 375px) {
+    .cabecalho-carreiras__logo {
+        width: 40%;
+    }
+
+    .cabecalho-carreiras__titulo {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .cabecalho-carreiras__titulo {
+        font-size: 1em;
+    }
+
+    .cabecalho-carreiras__logo {
+        width: 25%;
+    }
+
+    .copy__carreiras {
+        display: block;
+        font-size: 0.65em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho-carreiras {
+        padding: 0.25em;
+    }
+
+    .copy__carreiras {
+        font-size: 0.75em;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .cabecalho-carreiras__titulo {
+        font-size: 1.25em;
+    }
+}

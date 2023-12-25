@@ -1,0 +1,81 @@
+@import url("../css/cabecalho.css");
+@import url("../css/navegacao.css");
+@import url("../css/principal.css");
+@import url("../css/rodape.css");
+@import url("../css/notificacao.css");
+@import url("../css/contato.css");
+@import url("../css/cabecalho-carreiras.css");
+@import url("../css/lista-carreiras.css");
+
+:root {
+    /* cores */
+    --branco: #FFFFFF;
+    --cor-de-fundo: rgba(0, 0, 0, 0.5);
+    --cor-de-fundo-escuro: rgba(0, 0, 0, 0.75);
+    --cor-fonte: #cacaca;
+    --cor-fonte-leve: rgba(202, 202, 202, 0.4);
+    --cor-fonte-hover: rgba(255, 255, 255, 0.2);
+    --vermelho-metropole: rgba(136, 46, 46, 0.9);
+    --amarelo-metropole: rgba(248, 190, 0, 0.9);
+    --amarelo-metropole-fraco: rgba(248, 190, 0, 0.6);
+    /* sombras */
+    --sombra-botao-menu: 10px 5px 5px rgba(0, 0, 0, 0.15);
+    --sombra-menu: 10px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+html {
+    background: url("../img/onibus-viacao-1.jpg") no-repeat fixed center;
+    background-size: cover;
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+
+.html-carreiras {
+    background: url("../img/onibus-viacao-4.jpg") no-repeat fixed center;
+    background-size: cover;
+    background-position-x: 100%;
+    background-position-y: top;
+}
+
+body {
+    background-color: var(--cor-de-fundo);
+    display: grid;
+    grid-template-rows: auto auto 100vh auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "cabecalho cabecalho"
+    "navegacao navegacao"
+    "principal principal"
+    "rodape rodape"
+    ;
+    font-family: 'Roboto', sans-serif;
+}
+
+.body-contato {
+    grid-template-rows: auto auto auto auto;
+}
+
+.cabecalho {
+    grid-area: cabecalho;
+}
+
+.navegacao {
+    grid-area: navegacao;
+}
+
+.principal {
+    grid-area: principal;
+}
+
+.rodape {
+    grid-area: rodape;
+}
+
+@media screen and (min-width: 1024px) {
+    .html-carreiras {
+        background: url("../img/onibus-viacao-4.jpg") no-repeat fixed center;
+        background-size: cover;
+        background-position-x: 100%;
+        background-position-y: center;
+    }
+}
